@@ -1,7 +1,35 @@
+#!/usr/bin/env node
+
+
+/*
+
+    chmod +x index.js
+
+*/
+
+/*
+
+npm i -g @erickwendel/hacker-chat-client
+
+npm unlink -g @erickwendel/hacker-chat-client
+hacker-chat \
+    --username erickwendel \
+    --room sala01
+
+./index.js \
+    --username erickwendel \
+    --room sala01
+
+node index.js \
+    --username erickwendel \
+    --room sala01 \
+    --hostUri localhost
+*/
+
 import Events from 'events'
 import CliConfig from './src/cliConfig.js';
 import EventManager from './src/eventManager.js';
-import SocketClient from './src/socket.js';
+import SocketClient from './src/socker.js';
 import TerminalController from "./src/terminalController.js";
 
 
@@ -23,3 +51,4 @@ eventManager.joinRoomAndWaitForMessages(data)
 
 const controller = new TerminalController()
 await controller.initializeTable(componentEmitter)
+
